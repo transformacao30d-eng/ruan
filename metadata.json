@@ -1,0 +1,8 @@
+{
+  "name": "Remix +5000 Atividades de Caligrafia",
+  "description": "Landing page de alta conversão para o kit digital com +5000 atividades de caligrafia para crianças por R$ 14,90.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
