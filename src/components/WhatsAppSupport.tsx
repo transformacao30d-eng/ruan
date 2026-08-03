@@ -33,11 +33,6 @@ export const WhatsAppSupport: React.FC = () => {
         {/* Soft halo glow */}
         <span className="absolute -inset-2 rounded-full bg-[#52D89C]/20 -z-10 group-hover:scale-110 transition-transform" />
 
-        {/* Red Notification Badge */}
-        <span className="absolute -top-1 -right-1 sm:top-0 sm:right-0 bg-[#F87171] text-white font-extrabold text-[11px] sm:text-xs w-5 h-5 sm:w-5.5 sm:h-5.5 rounded-full flex items-center justify-center border-2 border-white shadow-sm z-10">
-          1
-        </span>
-
         {/* WhatsApp Icon */}
         <svg
           className="w-7 h-7 sm:w-8 sm:h-8 fill-current text-white shrink-0"
