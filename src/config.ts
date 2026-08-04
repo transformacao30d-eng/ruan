@@ -10,7 +10,7 @@ export const CHECKOUT_URL = "https://ggcheckout.app/checkout/v5/iMAPkM9glL3DeJKk
 export const PRODUCT_INFO = {
   name: "+5000 Atividades de Caligrafia",
   priceOriginal: "R$ 39,90",
-  priceCurrent: "R$ 14,90",
+  priceCurrent: "R$ 19,90",
   guaranteeDays: 7,
   contactEmail: "suporte@atividadesdecaligrafia.com.br",
   supportWhatsApp: "(24) 99888-3726"

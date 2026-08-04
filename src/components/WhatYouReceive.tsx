@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { 
-  ArrowRight,
   ChevronLeft,
   ChevronRight
 } from 'lucide-react';
@@ -145,7 +144,6 @@ export const WhatYouReceive: React.FC = () => {
             className="inline-flex items-center justify-center gap-3 px-8 py-4 sm:py-4.5 rounded-2xl bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-extrabold text-lg sm:text-xl shadow-lg shadow-blue-500/25 hover:shadow-blue-500/35 transition-all transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
           >
             <span>QUERO O MATERIAL COMPLETO</span>
-            <ArrowRight className="w-5 h-5" />
           </a>
         </div>
 

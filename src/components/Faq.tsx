@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, HelpCircle, ArrowRight } from 'lucide-react';
+import { ChevronDown, HelpCircle } from 'lucide-react';
 import { FaqItem } from '../types';
 import { CHECKOUT_URL } from '../config';
 
@@ -119,7 +119,6 @@ export const Faq: React.FC = () => {
             className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 sm:py-4.5 rounded-2xl bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-extrabold text-lg sm:text-xl shadow-lg shadow-blue-500/25 hover:shadow-blue-500/35 transition-all transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer text-center"
           >
             <span>QUERO O MATERIAL COMPLETO</span>
-            <ArrowRight className="w-5 h-5" />
           </a>
         </div>
 

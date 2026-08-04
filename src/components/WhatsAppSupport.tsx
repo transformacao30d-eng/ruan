@@ -8,17 +8,17 @@ export const WhatsAppSupport: React.FC = () => {
     : `https://wa.me/?text=Olá!%20Gostaria%20de%20suporte%20sobre%20as%205000%20Atividades%20de%20Caligrafia.`;
 
   return (
-    <div className="fixed bottom-20 right-3 sm:right-6 md:bottom-6 z-50 flex flex-col items-end gap-2.5 pointer-events-none select-none">
+    <div className="fixed bottom-20 right-3 sm:right-6 md:bottom-6 z-50 flex flex-row items-center gap-2 sm:gap-3 pointer-events-none select-none">
       {/* Speech Pill Banner */}
       <a
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="pointer-events-auto flex items-center gap-2.5 bg-white px-4 py-2.5 sm:py-3 rounded-full shadow-lg shadow-slate-300/40 border border-slate-100 hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all duration-200 cursor-pointer"
+        className="pointer-events-auto flex items-center gap-2 sm:gap-2.5 bg-white px-3.5 py-2 sm:py-2.5 rounded-full shadow-lg shadow-slate-300/40 border border-slate-100 hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all duration-200 cursor-pointer"
       >
         <span className="w-2.5 h-2.5 rounded-full bg-[#52D89C] shrink-0 animate-pulse" />
         <span className="font-extrabold text-slate-800 text-xs sm:text-sm tracking-tight whitespace-nowrap">
-          Dúvidas? Chame no WhatsApp!
+          Suporte
         </span>
       </a>
 

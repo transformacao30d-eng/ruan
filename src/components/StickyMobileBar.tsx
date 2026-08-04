@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Zap, ShieldCheck } from 'lucide-react';
+import { Zap, ShieldCheck } from 'lucide-react';
 import { CHECKOUT_URL, PRODUCT_INFO } from '../config';
 
 export const StickyMobileBar: React.FC = () => {
@@ -37,8 +37,7 @@ export const StickyMobileBar: React.FC = () => {
           href={CHECKOUT_URL}
           className="flex-1 inline-flex items-center justify-center gap-1.5 px-4 py-3 rounded-xl bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-extrabold text-xs sm:text-sm shadow-md active:scale-[0.98] transition-transform text-center whitespace-nowrap"
         >
-          <span>QUERO ACESSAR POR R$ 14,90</span>
-          <ArrowRight className="w-4 h-4 shrink-0" />
+          <span>QUERO O MATERIAL COMPLETO</span>
         </a>
       </div>
     </div>

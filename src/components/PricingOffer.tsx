@@ -122,7 +122,6 @@ export const PricingOffer: React.FC = () => {
               className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 sm:py-5 rounded-2xl bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-black text-lg sm:text-xl tracking-wide uppercase shadow-xl shadow-blue-900/30 hover:shadow-blue-900/40 transition-all transform hover:scale-[1.02] active:scale-95 cursor-pointer"
             >
               <span>QUERO O MATERIAL COMPLETO</span>
-              <Zap className="w-5 h-5 fill-white text-white" />
             </a>
 
             {/* Security note below button */}
