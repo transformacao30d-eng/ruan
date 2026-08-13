@@ -1,9 +1,27 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Proteção contra erro de estrutura circular no JSON.stringify por scripts de rastreamento -->
+    <!-- Proteção contra erros de JSON.parse('undefined') e estrutura circular no JSON.stringify -->
     <script>
       (function() {
+        var originalParse = JSON.parse;
+        JSON.parse = function(text, reviver) {
+          if (text === undefined || text === null || text === 'undefined' || text === '') {
+            return null;
+          }
+          try {
+            return originalParse.call(JSON, text, reviver);
+          } catch (e) {
+            if (typeof text === 'string' && (text.trim() === 'undefined' || text.trim() === '' || text.trim() === 'null')) {
+              return null;
+            }
+            if (e instanceof SyntaxError && (e.message.indexOf('undefined') !== -1 || String(text).indexOf('undefined') !== -1)) {
+              return null;
+            }
+            throw e;
+          }
+        };
+
         var originalStringify = JSON.stringify;
         JSON.stringify = function(value, replacer, space) {
           var cache = new WeakSet();

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Check, Shield, AlertTriangle, Sparkles, Lock, Zap, Gift } from 'lucide-react';
-import { CHECKOUT_URL, PRODUCT_INFO } from '../config';
+import { PRODUCT_INFO } from '../config';
+import { getCheckoutUrl } from '../utils/checkout';
 
 export const PricingOffer: React.FC = () => {
   const planBenefits = [
@@ -118,7 +119,7 @@ export const PricingOffer: React.FC = () => {
           {/* CTA Button */}
           <div className="space-y-4">
             <a
-              href={CHECKOUT_URL}
+              href={getCheckoutUrl()}
               className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 sm:py-5 rounded-2xl bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-black text-lg sm:text-xl tracking-wide uppercase shadow-xl shadow-blue-900/30 hover:shadow-blue-900/40 transition-all transform hover:scale-[1.02] active:scale-95 cursor-pointer"
             >
               <span>QUERO O MATERIAL COMPLETO</span>

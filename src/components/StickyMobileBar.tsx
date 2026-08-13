@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Zap, ShieldCheck } from 'lucide-react';
-import { CHECKOUT_URL, PRODUCT_INFO } from '../config';
+import { PRODUCT_INFO } from '../config';
+import { getCheckoutUrl } from '../utils/checkout';
 
 export const StickyMobileBar: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -34,7 +35,7 @@ export const StickyMobileBar: React.FC = () => {
         </div>
 
         <a
-          href={CHECKOUT_URL}
+          href={getCheckoutUrl()}
           className="flex-1 inline-flex items-center justify-center gap-1.5 px-4 py-3 rounded-xl bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-extrabold text-xs sm:text-sm shadow-md active:scale-[0.98] transition-transform text-center whitespace-nowrap"
         >
           <span>QUERO O MATERIAL COMPLETO</span>
