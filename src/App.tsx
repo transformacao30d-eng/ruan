@@ -3,6 +3,7 @@ import { Hero } from './components/Hero';
 import { WhatYouReceive } from './components/WhatYouReceive';
 import { Testimonials } from './components/Testimonials';
 import { PricingOffer } from './components/PricingOffer';
+import { GuaranteeSection } from './components/GuaranteeSection';
 import { Faq } from './components/Faq';
 import { StickyMobileBar } from './components/StickyMobileBar';
 import { SampleModal } from './components/SampleModal';
@@ -23,10 +24,13 @@ export default function App() {
         {/* 3. Seção de Depoimentos */}
         <Testimonials />
 
-        {/* 4. Seção "Nosso Plano de R$ 14,90" */}
+        {/* 4. Seção do Plano / Oferta */}
         <PricingOffer />
 
-        {/* 5. Seção FAQ & Chamada Final */}
+        {/* 5. Seção de Garantia de 7 Dias & Segurança */}
+        <GuaranteeSection />
+
+        {/* 6. Seção FAQ & Chamada Final */}
         <Faq />
       </main>
 
