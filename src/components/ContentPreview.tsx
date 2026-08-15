@@ -116,10 +116,10 @@ export const ContentPreview: React.FC = () => {
   const currentSlide = slides[currentIndex];
 
   return (
-    <section id="previa-do-conteudo" className="py-16 sm:py-24 bg-white relative overflow-hidden border-t border-slate-100">
+    <section id="previa-do-conteudo" className="py-16 sm:py-24 bg-gradient-to-b from-[#CCE3FD] via-[#D8EAFF] to-[#CCE3FD] relative overflow-hidden border-t border-blue-200/80">
       
       {/* Background glow accents */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] sm:w-[900px] h-[600px] sm:h-[900px] bg-blue-50/60 rounded-full blur-3xl pointer-events-none -z-10" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] sm:w-[900px] h-[600px] sm:h-[900px] bg-blue-200/30 rounded-full blur-3xl pointer-events-none -z-10" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 relative z-10 text-center">
         

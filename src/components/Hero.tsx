@@ -23,7 +23,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenSampleModal }) => {
   };
 
   return (
-    <section id="hero" className="relative pb-16 md:pb-24 overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50/50">
+    <section id="hero" className="relative pb-16 md:pb-24 overflow-hidden bg-gradient-to-b from-[#CBE0FD] via-[#D8EAFF] to-[#CCE4FD]">
       {/* Top Countdown Bar */}
       <div className="w-full bg-[#4F7DF3] text-white py-2.5 px-4 shadow-sm text-center text-xs sm:text-sm font-bold tracking-wide flex items-center justify-center gap-2 mb-8">
         <span className="text-sm sm:text-base animate-bounce">🔥</span>

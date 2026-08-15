@@ -43,7 +43,7 @@ export const Testimonials: React.FC = () => {
   }, [currentIndex]);
 
   return (
-    <section id="depoimentos" className="py-16 md:py-24 bg-slate-50/60 relative overflow-hidden">
+    <section id="depoimentos" className="py-16 md:py-24 bg-[#D3E6FC] relative overflow-hidden border-t border-blue-200/80">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center">
         
         {/* Section Header */}

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronDown, HelpCircle } from 'lucide-react';
 import { FaqItem } from '../types';
-import { CHECKOUT_URL } from '../config';
+import { getCheckoutUrl } from '../utils/checkout';
 
 export const Faq: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -54,10 +54,10 @@ export const Faq: React.FC = () => {
   };
 
   return (
-    <section id="faq" className="py-16 md:py-24 bg-gradient-to-b from-blue-50/60 via-slate-50 to-indigo-50/40 relative overflow-hidden">
+    <section id="faq" className="py-16 md:py-24 bg-gradient-to-b from-[#CCE3FD] via-[#D8EAFF] to-[#C4DFFD] relative overflow-hidden border-t border-blue-200/80">
       {/* Decorative Brand Color Glows */}
-      <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-emerald-400/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-96 bg-blue-300/20 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-80 h-80 bg-sky-300/15 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
         
@@ -115,7 +115,7 @@ export const Faq: React.FC = () => {
         {/* CTA Button */}
         <div className="text-center pt-2">
           <a
-            href={CHECKOUT_URL}
+            href={getCheckoutUrl()}
             className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 sm:py-4.5 rounded-2xl bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-extrabold text-lg sm:text-xl shadow-lg shadow-blue-500/25 hover:shadow-blue-500/35 transition-all transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer text-center"
           >
             <span>QUERO O MATERIAL COMPLETO</span>

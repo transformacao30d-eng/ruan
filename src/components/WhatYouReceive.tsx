@@ -107,12 +107,12 @@ export const WhatYouReceive: React.FC = () => {
   ];
 
   return (
-    <section id="o-que-voce-vai-receber" className="py-16 sm:py-24 bg-[#F8FAFC] relative overflow-hidden border-t border-slate-100">
+    <section id="o-que-voce-vai-receber" className="py-16 sm:py-24 bg-[#D3E6FC] relative overflow-hidden border-t border-blue-200/80">
       
       {/* Subtle background decorative shapes */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none overflow-hidden">
-        <div className="absolute top-20 left-10 w-96 h-96 bg-blue-100/30 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-indigo-100/30 rounded-full blur-3xl" />
+        <div className="absolute top-20 left-10 w-96 h-96 bg-blue-200/40 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-indigo-200/40 rounded-full blur-3xl" />
       </div>
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 relative z-10">

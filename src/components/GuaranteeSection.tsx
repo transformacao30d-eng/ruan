@@ -3,7 +3,7 @@ import garantiaImg from '../assets/images/garantia_7_dias_1786556442569.jpg';
 
 export const GuaranteeSection: React.FC = () => {
   return (
-    <section className="py-12 sm:py-16 bg-[#F3F6FC] px-4 sm:px-6">
+    <section className="py-12 sm:py-16 bg-[#D4E7FC] px-4 sm:px-6 border-t border-blue-200/80">
       <div className="max-w-4xl mx-auto">
         <div className="bg-white rounded-[28px] shadow-xl shadow-slate-200/60 p-6 sm:p-10 md:p-12 text-center border border-slate-100/80">
           

@@ -14,7 +14,7 @@ export default function App() {
   const [sampleModalOpen, setSampleModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-800 font-sans antialiased selection:bg-[#4F7DF3] selection:text-white pb-16 md:pb-0">
+    <div className="min-h-screen bg-[#D4E6FC] text-slate-800 font-sans antialiased selection:bg-[#4F7DF3] selection:text-white pb-16 md:pb-0">
       <main>
         {/* 1. Hero Section */}
         <Hero onOpenSampleModal={() => setSampleModalOpen(true)} />
